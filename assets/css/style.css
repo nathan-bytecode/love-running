@@ -24,7 +24,10 @@ h1, h2 {
 #logo {
     float: left;
     font-size: 280%;
+    margin-left: 30px;
 }
+
+/* navigation links */
 
 #menu {
     font-size: 110%;
@@ -54,7 +57,19 @@ h1, h2 {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* hero image */
+/* hero image and cover text */
+
+#hero-outer {
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+
+    position: relative;
+} 
+
+#cover-text, #cover-text h2 {
+    color: #fff;
+}
 
 #hero-image {
     height: 600px;
@@ -65,6 +80,16 @@ h1, h2 {
     animation-name: hero-zoom;
     animation-duration: 5s;
     animation-fill-mode: forwards;
+}
+
+/* creates the level of zoom for hero image */
+@keyframes hero-zoom {
+    from{
+transform: scale(1);
+    }
+    to{transform: scale(1.1);
+
+    }
 }
 
 #cover-text {
@@ -87,20 +112,28 @@ h1, h2 {
     position: absolute;
 }
 
-#hero-outer {
-    height: 600px;
-    width: 100%;
-    overflow: hidden;
+/* club ethos */
 
-    position: absolute;
+#club-ethos {
+    height: 600px;
 }
 
-/* creates the level of zoom for hero image */
-@keyframes hero-zoom {
-    from{
-transform: scale(1);
-    }
-    to{transform: scale(1.1);
+#left-about {
+    padding-top: 30px;
+    width: 33%;
+    float: left;
+    background-color: blue;
+}
 
-    }
+#right-about {
+    padding-top: 30px;
+    width: 33%;
+    float: right;
+    background-color: silver;
+}
+
+#center-about {
+    width: 33%;
+    margin: 0 auto;
+    background-color: green;
 }
